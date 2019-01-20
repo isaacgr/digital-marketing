@@ -33,9 +33,35 @@ app.engine(
   })
 );
 
+// GET /
+app.get("/", (request, response) => {
+  response.render("home");
+});
+
+app.post("/api/listing", (request, response) => {
+  Listing.create({
+    address: request.body.address,
+    lot_size: request.body.lot_size,
+    pic: request.body.pic,
+    lat: request.body.lat,
+    long: request.body.long,
+    street_classification: request.body.street_classification,
+    hwy_dist: request.body.hwy_dist,
+    road_dist: request.body.road_dist
+  })
+    .then(doc => {
+      console.log("OK");
+      response.status(200).send(doc);
+    })
+    .catch(error => {
+      console.log(error);
+      response.status(400).send({ error: error["message"] });
+    });
+});
+
 // GET /api/temp/all
 
-app.get("/api/listing/all", (request, response) => {
+app.get("/api/listings/all", (request, response) => {
   const limit = request.query.limit
     ? {
         values: {
@@ -43,17 +69,13 @@ app.get("/api/listing/all", (request, response) => {
         }
       }
     : {};
-  Temp.find({}, limit)
+  Listing.find({}, limit)
     .then(doc => {
       response.send(doc);
     })
     .catch(error => {
       response.status(400).send({ error: error["message"] });
     });
-});
-
-app.get("/", (request, response) => {
-  response.render("home");
 });
 
 // GET /listings

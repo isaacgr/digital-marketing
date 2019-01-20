@@ -3,8 +3,6 @@ const env = process.env.NODE_ENV || "development";
 
 if (env === "development") {
   process.env.MONGODB_URI = "mongodb://localhost:27017/Listings";
-} else if (env === "test") {
-  process.env.MONGODB_URI = "mongodb://localhost:27017/ListingsTest";
 }
 
 mongoose.connect(
@@ -13,7 +11,7 @@ mongoose.connect(
     if (error) {
       throw error;
     }
-    console.log("Connected to db");
+    console.log(`Connected to db ${process.env.MONGODB_URI}`);
   }
 );
 
