@@ -3,7 +3,7 @@ const listingSchema = new mongoose.Schema(
   {
     address: { type: String, required: true },
     lot_size: { type: String, required: true },
-    pic: { type: String, required: true },
+    pic: { type: String, required: false },
     lat: { type: Number, required: true },
     long: { type: Number, required: true },
     street_classification: { type: String, required: true },

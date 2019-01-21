@@ -51,7 +51,10 @@ app.post("/api/listing", (request, response) => {
   })
     .then(doc => {
       console.log("OK");
-      response.status(200).send(doc);
+      response.status(200).send({
+        success: "OK",
+        doc
+      });
     })
     .catch(error => {
       console.log(error);
