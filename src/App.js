@@ -40,10 +40,10 @@ class App extends React.Component {
       <div>
         <section className="section heading">
           <div className="container">
-            <h1 className="header">Villabode</h1>
+            <h1 className="header">VillaBode Consulting</h1>
             <p className="heading__description mt-5">
-              Villabode is dedicated to helping contractors find available lots
-              for zoning and development
+              Our team of experts is dedicated to helping contractors and
+              businesses find available lots for future development
             </p>
             <div className="search">
               {/* <h1 className="header u-text-lg">Start searching now!</h1> */}
@@ -78,7 +78,7 @@ class App extends React.Component {
         <section className="section footer">
           <div className="container">
             <footer>
-              Villabode is an extension of{" "}
+              VillaBode is an extension of{" "}
               <a href="http://staging.irowell.io" target="_blank">
                 InteGRated concepts
               </a>

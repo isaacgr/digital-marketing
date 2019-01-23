@@ -38951,9 +38951,9 @@ function (_React$Component) {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "header"
-      }, "Villabode"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      }, "VillaBode Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "heading__description mt-5"
-      }, "Villabode is dedicated to helping contractors find available lots for zoning and development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Our team of experts is dedicated to helping contractors and businesses find available lots for future development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-bar"
@@ -38980,7 +38980,7 @@ function (_React$Component) {
         className: "section footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, "Villabode is an extension of", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, "VillaBode is an extension of", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "http://staging.irowell.io",
         target: "_blank"
       }, "InteGRated concepts")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CardModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -39022,14 +39022,14 @@ var Card = function Card(_ref) {
   }) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "card-title"
+    className: "card-title u-text-md"
   }, listing.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "card-text"
+    className: "card-text u-text-sm"
   }, "Some quick example text to build on the card title and make up the bulk of the card's content."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       handlePropertySelect(listing);
     },
-    className: "btn btn-primary"
+    className: "btn btn-primary btn-lg"
   }, "See property")));
 };
 
@@ -39066,10 +39066,54 @@ var CardModal = function CardModal(props) {
     long: props.selectedListing.long
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section modal-options"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-primary",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "carouselExampleControls",
+    class: "carousel slide",
+    "data-ride": "carousel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "carousel-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "carousel-item active"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    class: "d-block w-100",
+    src: "...",
+    alt: "First slide"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    class: "d-block w-100",
+    src: "...",
+    alt: "Second slide"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    class: "carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    class: "d-block w-100",
+    src: "...",
+    alt: "Third slide"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "carousel-control-prev",
+    href: "#carouselExampleControls",
+    role: "button",
+    "data-slide": "prev"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    class: "carousel-control-prev-icon",
+    "aria-hidden": "true"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    class: "sr-only"
+  }, "Previous")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    class: "carousel-control-next",
+    href: "#carouselExampleControls",
+    role: "button",
+    "data-slide": "next"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    class: "carousel-control-next-icon",
+    "aria-hidden": "true"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    class: "sr-only"
+  }, "Next"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-primary btn-lg",
     onClick: props.handleClearSelectedOption
-  }, "Okay")));
+  }, "View Property Details")));
 };
 
 react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement("body");
