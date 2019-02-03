@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import VisibleCards from "./VisibleCards";
 
 // const json = async () => {
 //   const response = await fetch("/api/temp/all?limit=-504", {
@@ -14,4 +15,8 @@ import App from "./App";
 
 const jsx = <App />;
 
-ReactDOM.render(jsx, document.getElementById("root"));
+if (document.getElementById("root")) {
+  ReactDOM.render(jsx, document.getElementById("root"));
+} else {
+  ReactDOM.render(<VisibleCards />, document.getElementById("listings"));
+}

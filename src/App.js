@@ -1,39 +1,13 @@
 import React from "react";
-import VisibleCards from "./VisibleCards";
-import CardModal from "./CardModal";
 
 class App extends React.Component {
-  state = {
-    text: "",
-    modalIsOpen: false,
-    listings: [],
-    selectedListing: {}
-  };
-  componentDidMount() {
-    fetch("/api/listings/all", {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(listings => {
-        this.setState(() => ({ listings }));
-      });
-  }
   handleSubmit = () => {
     console.log("Submit");
+    location.href = "/listings";
   };
   handleOnChange = e => {
     const value = e.target.value;
     this.setState(() => ({ text: value }));
-  };
-  handlePropertySelect = listing => {
-    this.setState({ modalIsOpen: true, selectedListing: listing });
-  };
-  handleClearSelectedOption = () => {
-    this.setState(() => ({ modalIsOpen: false }));
   };
   render() {
     return (
@@ -46,7 +20,6 @@ class App extends React.Component {
               businesses find available lots for future development
             </p>
             <div className="search">
-              {/* <h1 className="header u-text-lg">Start searching now!</h1> */}
               <div className="search-bar">
                 <input
                   onChange={this.handleOnChange}
@@ -66,8 +39,19 @@ class App extends React.Component {
             </div>
           </div>
         </section>
+        <section className="section footer">
+          <div className="container">
+            <footer>
+              VillaBode is an extension of{" "}
+              <a href="http://irowell.io" target="_blank">
+                InteGRated concepts
+              </a>
+            </footer>
+            <footer>Copyright &copy; Quincey Bailey 2019</footer>
+          </div>
+        </section>
 
-        <div className="container">
+        {/* <div className="container">
           <section className="section results">
             <VisibleCards
               listings={this.state.listings}
@@ -85,11 +69,7 @@ class App extends React.Component {
             </footer>
           </div>
         </section>
-        <CardModal
-          isOpen={this.state.modalIsOpen}
-          handleClearSelectedOption={this.handleClearSelectedOption}
-          selectedListing={this.state.selectedListing}
-        />
+ */}
       </div>
     );
   }
