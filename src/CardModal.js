@@ -9,7 +9,11 @@ const CardModal = props => (
     closeTimeoutMS={200}
     className="custom-modal"
   >
-    <Map lat={props.selectedListing.lat} long={props.selectedListing.long} />
+    <Map
+      lat={props.selectedListing.lat}
+      long={props.selectedListing.long}
+      address={props.selectedListing.address}
+    />
     <section className="section modal-options">
       <div
         id="carouselExampleControls"
@@ -63,7 +67,7 @@ const CardModal = props => (
           {props.selectedListing.provice}{" "}
         </h1>
         <h2>Price: {props.selectedListing.price}</h2>
-        <p>Some description</p>
+        <p>{props.selectedListing.desc}</p>
         <table>
           <tr>
             <th>Ammenities</th>
@@ -83,33 +87,44 @@ const CardModal = props => (
           </tr>
         </table>
         <div className="card__description__details row">
-          <div className="col">
-            <h5>Lot Size</h5>
-            <p>{props.selectedListing.lot_size}</p>
+          <div className="col tile">
+            <h5 className="u-text-md">Lot Size</h5>
+            <p className="u-text-xs">{props.selectedListing.lot_size}</p>
           </div>
-          <div className="col">
-            <h5>Zoning</h5>
-            <p>{props.selectedListing.zoning}</p>
+          <div className="col tile">
+            <h5 className="u-text-md">Zoning</h5>
+            <p className="u-text-xs">{props.selectedListing.zoning}</p>
+            <a
+              className="tile__link"
+              href={props.selectedListing.pdf}
+              target="_blank"
+            >
+              Additional Zoning Information
+            </a>
           </div>
-          <div className="col">
-            <h5>Front Streets</h5>
-            <p>{props.selectedListing.front_streets}</p>
+
+          <div className="col tile">
+            <h5 className="u-text-md">Front Streets</h5>
+            <p className="u-text-xs">{props.selectedListing.front_streets}</p>
           </div>
-          <div className="col">
-            <h5>Ward</h5>
-            <p>{props.selectedListing.ward}</p>
+          <div className="col tile">
+            <h5 className="u-text-md">Ward</h5>
+            <p className="u-text-xs">{props.selectedListing.ward}</p>
           </div>
-          <div className="col">
-            <h5>Community</h5>
-            <p>{props.selectedListing.community}</p>
+          <div className="col tile">
+            <h5 className="u-text-md">Community</h5>
+            <p className="u-text-xs">{props.selectedListing.community}</p>
           </div>
         </div>
       </div>
-      <button
-        className="btn btn-primary btn-lg u-margin-top-sm modal__button"
-        onClick={props.handleClearSelectedOption}
-      >
-        Inquire About Property
+      <button className="btn btn-success btn-lg u-margin-top-sm modal__button">
+        <a
+          className="button--link"
+          href={props.selectedListing.one_sheet}
+          target="_blank"
+        >
+          Download the One-sheet
+        </a>
       </button>
     </section>
   </Modal>

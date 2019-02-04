@@ -44888,7 +44888,8 @@ var CardModal = function CardModal(props) {
     className: "custom-modal"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Map__WEBPACK_IMPORTED_MODULE_2__["default"], {
     lat: props.selectedListing.lat,
-    long: props.selectedListing.long
+    long: props.selectedListing.long,
+    address: props.selectedListing.address
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section modal-options"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -44934,22 +44935,49 @@ var CardModal = function CardModal(props) {
     className: "sr-only"
   }, "Next"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card__description"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.selectedListing.address, ", ", props.selectedListing.city, " ", props.selectedListing.provice, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Price: ", props.selectedListing.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Ammenities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Distance From Property")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Distance from schools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.school_drive_time)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Arterial Road"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.road_dist)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Highway"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.hwy_dist))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.selectedListing.address, ", ", props.selectedListing.city, " ", props.selectedListing.provice, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Price: ", props.selectedListing.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.desc), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Ammenities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Distance From Property")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Distance from schools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.school_drive_time)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Arterial Road"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.road_dist)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Highway"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.hwy_dist))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card__description__details row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Lot Size"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.lot_size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Zoning"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.zoning)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Front Streets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.front_streets)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Ward"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.ward)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Community"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.community)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-primary btn-lg u-margin-top-sm modal__button",
-    onClick: props.handleClearSelectedOption
-  }, "Inquire About Property")));
+    className: "col tile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "u-text-md"
+  }, "Lot Size"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "u-text-xs"
+  }, props.selectedListing.lot_size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col tile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "u-text-md"
+  }, "Zoning"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "u-text-xs"
+  }, props.selectedListing.zoning), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "tile__link",
+    href: props.selectedListing.pdf,
+    target: "_blank"
+  }, "Additional Zoning Information")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col tile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "u-text-md"
+  }, "Front Streets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "u-text-xs"
+  }, props.selectedListing.front_streets)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col tile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "u-text-md"
+  }, "Ward"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "u-text-xs"
+  }, props.selectedListing.ward)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col tile"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "u-text-md"
+  }, "Community"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "u-text-xs"
+  }, props.selectedListing.community)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-success btn-lg u-margin-top-sm modal__button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "button--link",
+    href: props.selectedListing.one_sheet,
+    target: "_blank"
+  }, "Download the One-sheet"))));
 };
 
 react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement("body");
@@ -44976,6 +45004,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var AnyReactComponent = function AnyReactComponent(_ref) {
+  var text = _ref.text;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      color: "white",
+      background: "red",
+      padding: "5px",
+      display: "inline-flex",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "100%",
+      transform: "translate(-50%, -50%)",
+      position: "absolute",
+      top: "10rem",
+      left: "55rem"
+    }
+  }, text);
+};
+
 var Mapper = function Mapper(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
@@ -44989,6 +45037,9 @@ var Mapper = function Mapper(props) {
     defaultCenter: [props.lat, props.long],
     yesIWantToUseGoogleMapApiInternals: true,
     defaultZoom: 15
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnyReactComponent, {
+    lat: props.lat,
+    lng: props.long
   }));
 };
 

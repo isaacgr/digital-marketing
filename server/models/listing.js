@@ -18,7 +18,7 @@ const listingSchema = new mongoose.Schema(
     pics: { type: Array, required: false },
     lat: { type: Number, required: true },
     long: { type: Number, required: true },
-    street_classification: { type: String, required: false },
+    one_sheet: { type: String, required: false },
     hwy_dist: { type: String, required: false },
     road_dist: { type: String, required: false }
   },

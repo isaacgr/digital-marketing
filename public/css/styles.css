@@ -24,6 +24,14 @@ button:hover {
   cursor: pointer;
 }
 
+.button--link,
+.button--link:hover {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
 .container {
   margin: 0 auto;
   width: 75%;
@@ -209,6 +217,15 @@ button:hover {
   float: left;
   margin: 1rem;
   text-align: center;
+  height: 9rem;
+}
+
+.tile__link {
+  color: #fff;
+}
+
+.tile__link:hover {
+  color: #fff;
 }
 
 .modal__button {
@@ -222,6 +239,12 @@ button:hover {
   height: 30rem;
   object-fit: scale-down;
   width: 100%;
+}
+
+.tile {
+  background-color: #007bff;
+  border-radius: 3px;
+  color: #fff;
 }
 
 table {
@@ -248,6 +271,10 @@ tr:nth-child(even) {
 
 .u-text-sm {
   font-size: 1.5rem;
+}
+
+.u-text-xs {
+  font-size: 1.2rem;
 }
 
 .u-text-md {
