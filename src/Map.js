@@ -15,8 +15,7 @@ const AnyReactComponent = ({ text }) => (
       borderRadius: "100%",
       transform: "translate(-50%, -50%)",
       position: "absolute",
-      top: "10rem",
-      left: "55rem"
+      top: "10rem"
     }}
   >
     {text}
