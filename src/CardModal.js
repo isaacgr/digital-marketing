@@ -66,7 +66,7 @@ const CardModal = props => (
           {props.selectedListing.address}, {props.selectedListing.city}{" "}
           {props.selectedListing.province}{" "}
         </h1>
-        <h2>Price: {props.selectedListing.price}</h2>
+        <h2>Price: ${props.selectedListing.price}</h2>
         <p>{props.selectedListing.desc}</p>
         <table>
           <tr>
