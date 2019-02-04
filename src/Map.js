@@ -7,15 +7,13 @@ const AnyReactComponent = ({ text }) => (
     style={{
       color: "white",
       background: "red",
-      padding: "5px",
+      padding: "10px",
       display: "inline-flex",
       textAlign: "center",
       alignItems: "center",
       justifyContent: "center",
       borderRadius: "100%",
-      transform: "translate(-50%, -50%)",
-      position: "absolute",
-      top: "10rem"
+      transform: "translate(-50%, -50%)"
     }}
   >
     {text}
@@ -30,8 +28,9 @@ const Mapper = props => {
         defaultCenter={[props.lat, props.long]}
         yesIWantToUseGoogleMapApiInternals
         defaultZoom={15}
-      />
-      <AnyReactComponent lat={props.lat} lng={props.long} />
+      >
+        <AnyReactComponent lat={props.lat} lng={props.long} />
+      </GoogleMapReact>
     </div>
   );
 };

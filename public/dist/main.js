@@ -44935,7 +44935,7 @@ var CardModal = function CardModal(props) {
     className: "sr-only"
   }, "Next"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card__description"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.selectedListing.address, ", ", props.selectedListing.city, " ", props.selectedListing.provice, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Price: ", props.selectedListing.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.desc), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Ammenities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Distance From Property")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Distance from schools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.school_drive_time)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Arterial Road"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.road_dist)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Highway"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.hwy_dist))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.selectedListing.address, ", ", props.selectedListing.city, " ", props.selectedListing.provnice, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Price: ", props.selectedListing.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.desc), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Ammenities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Distance From Property")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Distance from schools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.school_drive_time)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Arterial Road"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.road_dist)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Highway"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.hwy_dist))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card__description__details row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col tile"
@@ -45010,16 +45010,13 @@ var AnyReactComponent = function AnyReactComponent(_ref) {
     style: {
       color: "white",
       background: "red",
-      padding: "5px",
+      padding: "10px",
       display: "inline-flex",
       textAlign: "center",
       alignItems: "center",
       justifyContent: "center",
       borderRadius: "100%",
-      transform: "translate(-50%, -50%)",
-      position: "absolute",
-      top: "10rem",
-      left: "55rem"
+      transform: "translate(-50%, -50%)"
     }
   }, text);
 };
@@ -45037,10 +45034,10 @@ var Mapper = function Mapper(props) {
     defaultCenter: [props.lat, props.long],
     yesIWantToUseGoogleMapApiInternals: true,
     defaultZoom: 15
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnyReactComponent, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnyReactComponent, {
     lat: props.lat,
     lng: props.long
-  }));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Mapper);
