@@ -39,27 +39,21 @@ app.get("/", (request, response) => {
 });
 
 app.post("/api/listing", (request, response) => {
-  Listing.create({
-    address: request.body.address,
-    lot_size: request.body.lot_size,
-    pic: request.body.pic,
-    lat: request.body.lat,
-    long: request.body.long,
-    street_classification: request.body.street_classification,
-    hwy_dist: request.body.hwy_dist,
-    road_dist: request.body.road_dist
-  })
-    .then(doc => {
-      console.log("OK");
-      response.status(200).send({
-        success: "OK",
-        doc
-      });
+  for (const listing in request.body) {
+    Listing.create({
+      ...request.body[listing]
     })
-    .catch(error => {
-      console.log(error);
-      response.status(400).send({ error: error["message"] });
-    });
+      .then(doc => {
+        console.log("OK");
+        response.status(200).send({
+          success: "OK",
+          doc
+        });
+      })
+      .catch(error => {
+        response.status(400).send({ error: error["message"] });
+      });
+  }
 });
 
 // GET /api/temp/all

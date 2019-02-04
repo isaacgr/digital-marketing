@@ -8,6 +8,7 @@ const Mapper = props => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyBcfPUtVA8vd8IMCcWYPQNNnXYlU8kytig" }}
         defaultCenter={[props.lat, props.long]}
+        yesIWantToUseGoogleMapApiInternals
         defaultZoom={15}
       />
     </div>

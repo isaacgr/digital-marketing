@@ -7,7 +7,7 @@ class VisibleCards extends React.Component {
     text: "",
     modalIsOpen: false,
     listings: [],
-    selectedListing: {}
+    selectedListing: null
   };
   componentDidMount() {
     fetch("/api/listings/all", {
@@ -43,11 +43,15 @@ class VisibleCards extends React.Component {
             );
           })}
         </section>
-        <CardModal
-          isOpen={this.state.modalIsOpen}
-          handleClearSelectedOption={this.handleClearSelectedOption}
-          selectedListing={this.state.selectedListing}
-        />
+        {this.state.selectedListing ? (
+          <CardModal
+            isOpen={this.state.modalIsOpen}
+            handleClearSelectedOption={this.handleClearSelectedOption}
+            selectedListing={this.state.selectedListing}
+          />
+        ) : (
+          ""
+        )}
       </div>
     );
   }

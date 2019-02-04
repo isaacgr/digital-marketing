@@ -44839,16 +44839,18 @@ var Card = function Card(_ref) {
       handlePropertySelect = _ref.handlePropertySelect;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
-  }, listing.pic ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, listing.pics ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "card-img-top",
-    src: listing.pic
+    src: listing.pics[1]
   }) : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "card-title u-text-md"
-  }, listing.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, listing.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "card-subtitle mb-2 text-muted"
+  }, listing.city, ", ", listing.province, " ", listing.postal_code), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card-text u-text-sm"
-  }, listing.desc), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Price: $", listing.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       handlePropertySelect(listing);
     },
@@ -44889,8 +44891,63 @@ var CardModal = function CardModal(props) {
     long: props.selectedListing.long
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section modal-options"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "btn btn-primary btn-lg",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "carouselExampleControls",
+    className: "carousel slide",
+    "data-ride": "carousel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-inner"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item active"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "d-block",
+    src: props.selectedListing.pics[0]
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "d-block",
+    src: props.selectedListing.pics[1]
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "carousel-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "d-block",
+    src: props.selectedListing.pics[2]
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-prev",
+    href: "#carouselExampleControls",
+    role: "button",
+    "data-slide": "prev"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "carousel-control-prev-icon",
+    "aria-hidden": "true"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "sr-only"
+  }, "Previous")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "carousel-control-next",
+    href: "#carouselExampleControls",
+    role: "button",
+    "data-slide": "next"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "carousel-control-next-icon",
+    "aria-hidden": "true"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "sr-only"
+  }, "Next"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__description"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.selectedListing.address, ", ", props.selectedListing.city, " ", props.selectedListing.provice, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Price: ", props.selectedListing.price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Some description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Ammenities"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Distance From Property")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Distance from schools"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.school_drive_time)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Arterial Road"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.road_dist)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, "Closest Highway"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, props.selectedListing.hwy_dist))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__description__details row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Lot Size"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.lot_size)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Zoning"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.zoning)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Front Streets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.front_streets)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Ward"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.ward)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Community"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.selectedListing.community)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-primary btn-lg u-margin-top-sm modal__button",
     onClick: props.handleClearSelectedOption
   }, "Inquire About Property")));
 };
@@ -44930,6 +44987,7 @@ var Mapper = function Mapper(props) {
       key: "AIzaSyBcfPUtVA8vd8IMCcWYPQNNnXYlU8kytig"
     },
     defaultCenter: [props.lat, props.long],
+    yesIWantToUseGoogleMapApiInternals: true,
     defaultZoom: 15
   }));
 };
@@ -44997,7 +45055,7 @@ function (_React$Component) {
       text: "",
       modalIsOpen: false,
       listings: [],
-      selectedListing: {}
+      selectedListing: null
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handlePropertySelect", function (listing) {
@@ -45054,11 +45112,11 @@ function (_React$Component) {
           listing: listing,
           handlePropertySelect: _this3.handlePropertySelect
         });
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CardModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      })), this.state.selectedListing ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CardModal__WEBPACK_IMPORTED_MODULE_2__["default"], {
         isOpen: this.state.modalIsOpen,
         handleClearSelectedOption: this.handleClearSelectedOption,
         selectedListing: this.state.selectedListing
-      }));
+      }) : "");
     }
   }]);
 

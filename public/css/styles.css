@@ -181,7 +181,64 @@ button:hover {
 }
 
 .modal-options {
-  margin-top: 10rem;
+  margin-top: 3rem;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #002141;
+}
+
+.carousel {
+  width: 50%;
+  float: left;
+}
+
+.card__description {
+  color: #002141;
+  width: 50%;
+  float: right;
+}
+
+.card__description__details {
+  margin-top: 3rem;
+}
+
+.card__description__details div {
+  display: block;
+  float: left;
+  margin: 1rem;
+  text-align: center;
+}
+
+.modal__button {
+  clear: both;
+  position: absolute;
+  bottom: 2rem;
+  right: 45%;
+}
+
+.d-block {
+  height: 30rem;
+  object-fit: scale-down;
+  width: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 /* Util classes */
@@ -203,6 +260,10 @@ button:hover {
 
 .u-margin-top-lg {
   margin-top: 10rem;
+}
+
+.u-margin-top-sm {
+  margin-top: 2rem;
 }
 
 /* Media queries */
