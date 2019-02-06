@@ -115,6 +115,10 @@ const CardModal = props => (
             <h5 className="u-text-md">Community</h5>
             <p className="u-text-xs">{props.selectedListing.community}</p>
           </div>
+          <div className="col tile">
+            <h5 className="u-text-md">Classification</h5>
+            <p className="u-text-xs">{props.selectedListing.classification}</p>
+          </div>
         </div>
       </div>
       <button className="btn btn-success btn-lg u-margin-top-sm modal__button">
@@ -123,7 +127,7 @@ const CardModal = props => (
           href={props.selectedListing.one_sheet}
           target="_blank"
         >
-          Download the One-sheet
+          Request Further Information
         </a>
       </button>
     </section>

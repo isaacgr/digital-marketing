@@ -20,7 +20,8 @@ const listingSchema = new mongoose.Schema(
     long: { type: Number, required: true },
     one_sheet: { type: String, required: false },
     hwy_dist: { type: String, required: false },
-    road_dist: { type: String, required: false }
+    road_dist: { type: String, required: false },
+    classification: { type: String, required: false }
   },
   { versionKey: false }
 );
