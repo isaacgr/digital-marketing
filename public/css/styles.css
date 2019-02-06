@@ -295,6 +295,13 @@ tr:nth-child(even) {
 }
 
 /* Media queries */
+@media only screen and (max-width: 1600px) {
+  .custom-modal {
+    width: 100%;
+    height: 85vh;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .header {
     font-size: 4rem;
