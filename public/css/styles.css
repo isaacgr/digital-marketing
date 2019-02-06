@@ -222,6 +222,7 @@ button:hover {
 
 .tile__link {
   color: #fff;
+  text-decoration: underline;
 }
 
 .tile__link:hover {
