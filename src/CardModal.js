@@ -112,10 +112,6 @@ const CardModal = props => (
             <p className="u-text-xs">{props.selectedListing.ward}</p>
           </div>
           <div className="col tile">
-            <h5 className="u-text-md">Community</h5>
-            <p className="u-text-xs">{props.selectedListing.community}</p>
-          </div>
-          <div className="col tile">
             <h5 className="u-text-md">Classification</h5>
             <p className="u-text-xs">{props.selectedListing.classification}</p>
           </div>
