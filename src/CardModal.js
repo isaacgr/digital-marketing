@@ -67,7 +67,7 @@ const CardModal = props => (
           {props.selectedListing.province}{" "}
         </h1>
         <h2>Price: ${props.selectedListing.price}</h2>
-        <p className="u-text-size-xs">{props.selectedListing.desc}</p>
+        <p className="u-text-xs">{props.selectedListing.desc}</p>
         <table>
           <tr>
             <th>Ammenities</th>
